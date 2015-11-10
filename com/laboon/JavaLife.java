@@ -1,24 +1,23 @@
 package com.laboon;
 
 public class JavaLife {
-
-    /**
-     * This is the main part.
-     *
-     * @param size Size of world
-     * @param seed Random number seed
-     * @param percent Percent of cells alive at beginning
-     * @param maxIterations Maximum number of iterations
-     */
+	/**
+	 * 
+	 * @param size Size of a world
+	 * @param seed Random number seed for RNG
+	 * @param percent Percent of cells alive at beginning
+	 * @param maxIterations Maximum number of iterations
+	 */
 	
-    public JavaLife(int size, int seed, int percent, int maxIterations) {
-	World w = new World(size, seed, percent);
-	System.out.println("Initial Configuration:");
-	System.out.println(w.toString());
-	for (int j=0; j < maxIterations; j++) {
-	    w = w.iterate();
-	    System.out.println("Iteration " + (j + 1) + ":");
-	    System.out.println(w.toString());
+	public JavaLife(int size, int seed, int percent, int maxIterations) {
+		World w = new World(size, seed, percent);
+		System.out.println("Initial Configuration:");
+		System.out.println(  w.toString()  );
+		for (int j=0; j < maxIterations; j++) {
+			w   = w.iterate();
+			System.out.println("Iteration " + (j + 1) + ":");
+			System.out.println(w.toString());
+		}
 	}
 		
     }
